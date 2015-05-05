@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block content %}
+
+<div style="background-color:#C7FF91;width:300px;height:100px;text-align:center;line-height:100px;">
+  <h1>阿唐的網站</h1>
+
+  <div>
+  <marquee behavior=alternate bgcolor=ffcc00>~ W e l c o m e ~</marquee>
+  <p>你有 <strong>{{ posts.length }}</strong> 則留言!</p>
+  <p><a href="/post/new">訪客留言</a></p>
+  <ul id="posts">
+    {% for post in posts %}
+      <li>
+        <h2>{{ post.title }}</h2>
+        <p><a href="/post/{{ post.id }}">閱讀留言</a></p>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+
+<div>
+                <a href="http://www.nqu.edu.tw/cht/index.php?" style="padding-left:4px;padding-right:4px " title="金門大學">國立金門大學</a>
+                
+                <a href="https://www.facebook.com/quemoy.universerty.volleyball?pnref=story" style="padding-left:4px;padding-right:4px " title="排球隊">金大男子排球隊</a>
+
+                <a href="https://www.youtube.com/" style="padding-left:4px;padding-right:4px " title="Youtube">Youtube</a>
+
+                <a href="https://www.google.com.tw/" style="padding-left:4px;padding-right:4px " title="Google首頁">Google</a>
+              </div>
+<a href="https://www.facebook.com/profile.php?id=100002258360060">
+                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Facebook.svg/2000px-Facebook.svg.png" width="70" height="30" alt="阿唐的Facebook"></a>
+
+
+  <img src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10896844_772789959472942_328622362910346551_n.jpg?oh=7a99d8ce11cc32e6bd2d146af4554bea&oe=55E13B6B&__gda__=1439812522_67aaee27d1b1b37f81ac3adb50d666f5" width="300" height="300">
+
+  
+{% endblock %}

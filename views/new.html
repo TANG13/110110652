@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block title %}New Post{% endblock %}
+
+{% block content %}
+  <h1>新留言</h1>
+  <p>新增留言</p>
+  <form action="/post" method="post">
+    <p><input type="text" placeholder="標題" name="title"></p>
+    <p><textarea placeholder="寫點什麼吧...." name="body"></textarea></p>
+    <p><input type="submit" value="留言"></p>
+  </form>
+{% endblock %}
